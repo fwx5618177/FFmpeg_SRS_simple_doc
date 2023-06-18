@@ -1,0 +1,3 @@
+/Users/fengwenxuan/Desktop/ffmpeg/hello/output/CMakeFiles/hello.dir
+/Users/fengwenxuan/Desktop/ffmpeg/hello/output/CMakeFiles/edit_cache.dir
+/Users/fengwenxuan/Desktop/ffmpeg/hello/output/CMakeFiles/rebuild_cache.dir

@@ -28,3 +28,23 @@
 2. 推流: `ffmpeg -re -i ./input.mp4 -codec copy -f flv -y rtmp://[]`
 3. 播放: `ffplay -i http://[]`
 
+## 3. HTTP-FLV 流媒体服务
+1. 配置文件: `http.flv.live.conf`
+2. run: `./objs/srs -c conf/http.flv.live.conf`
+3. push stream: `ffmpeg -re -i ./input.mp4 -codec copy -f flv -y rtmp://10.151.124.79/live/livestream`
+4. play: `ffplay -i http://192.168.0.108:8080/live/livestream.flv`
+
+
+## Nginx的RTMP流媒体服务
+1. 安装Nginx
+   - `brew install nginx-full --with-rtmp-module`
+2. 配置文件: `nginx.conf`
+3. 启动: `nginx`
+
+### Nginx流媒体模块 nginx-rtmp-module
+- `nginx-htp-flv-module`：支持HTTP-FLV
+- `nginx-rtmp-module`：支持RTMP
+- 编译: `git clone https://github.com/arut/nginx-rtmp-module.git`
+  - `./configure --add-module=../nginx_output --add-module=../nginx-rtmp-module`
+  - `make`
+  - `make install`
